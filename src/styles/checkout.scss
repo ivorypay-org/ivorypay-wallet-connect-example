@@ -1,0 +1,162 @@
+.prefix-icon {
+  position: absolute;
+  z-index: 1;
+  width: 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ivry-input {
+  width: 100%;
+  padding: 8px 11px;
+  border-radius: 5px;
+  &.ivry {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: #02084b;
+    border-color: #6167a7;
+    &:focus {
+      box-shadow: none;
+    }
+    &.ant-input[disabled] {
+      background: transparent;
+      &:hover {
+        border-color: #6167a7;
+      }
+    }
+  }
+  .ant-input-prefix {
+    margin-right: 15px;
+  }
+  &.pre {
+    .ant-input-prefix {
+      margin-right: 4px;
+      opacity: 0.4;
+    }
+  }
+  .ant-input {
+    background-color: transparent;
+  }
+  .ant-input-lg {
+    font-size: 14px;
+  }
+}
+.ivry-timer {
+  &.ant-progress {
+    .ant-progress-circle-gradient {
+      .ant-progress-text {
+        color: #2c3489;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.ivry-spinner > div {
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(180deg, #2c3489 0%, #7b61ff 100%);
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.ivry-spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.ivry-spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+.ivry-select {
+  background-color: transparent;
+  &.asPrefix {
+    .ant-select-selector {
+      height: 43px !important;
+      padding-left: calc(3rem - 8px) !important;
+      border-radius: 5px !important;
+    }
+  }
+  .ant-select-selector {
+    height: 45px !important;
+    padding: 5px 11px !important;
+    border-radius: 5px !important;
+    border-color: #6167a7 !important;
+    box-shadow: none !important;
+    .ant-select-selection-item {
+      color: #02084b;
+    }
+    &:focus {
+      border-color: #6167a7;
+    }
+  }
+}
+/*.label::before {
+  content: none !important;
+}*/
+
+.add-on {
+  .ant-input-group-addon {
+    height: 45px;
+    border-radius: 5px 0px 0px 5px;
+    border-color: #6167a7 !important;
+    box-shadow: none;
+    background: transparent;
+    color: #02084b !important;
+  }
+  .ant-input {
+    height: 45px;
+    border-radius: 0px 5px 0px;
+    border-color: #6167a7 !important;
+    box-shadow: none !important;
+    color: #02084b;
+  }
+}
+.ant-input-group-addon .ant-select-focused .ant-select-selector {
+  color: #02084b;
+}
+
+.transaction-timer .ant-progress-circle {
+  // transform: scale(0.9);
+  @apply scale-90 md:scale-100;
+}
+
+.transaction-timer .ant-statistic-content-value {
+  // font-size: 20px;
+  @apply text-[20px] md:text-xl;
+}
+.ant-form-item-required::before {
+  position: absolute;
+  right: -16px;
+}
+.border-text {
+  border: 2px solid #2c3489;
+  border-radius: 10px;
+}
