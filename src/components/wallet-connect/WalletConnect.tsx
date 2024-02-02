@@ -50,14 +50,13 @@ export const WalletConnect = ({
         await connection.getLatestBlockhash("confirmed")
       ).lastValidBlockHeight;
 
-      // 2. end the transaction to your connected wallet and trigger a popup to sign the transaction.
+      // 2. send the transaction to your connected wallet and trigger a popup to sign the transaction.
       const resp = await sendTransaction(transaction, connection);
 
       console.log({ resp });
 
       await connection.confirmTransaction(resp, "confirmed");
 
-      // This attempts to verify the transaction with the backend.
       if (typeof onWalletConfirmation === "function") {
         onWalletConfirmation(disconnect);
       }
